@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kukaldosh Garden — Taomlar menyusi</title>
+<meta name="description" content="Kukaldosh Garden oilaviy restorani taomlar menyusi." />
+<meta name="theme-color" content="#8f9c09" />
+
+<style>
+:root{--bg:#efefef;--card:#fff;--text:#111;--muted:#8a8a8a;--accent:#9e1518;--line:#e8e8e8}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.topbar{height:78px;background:#fff;border-radius:0 0 22px 22px;display:flex;align-items:center;padding:0 3.2%;gap:30px;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.brand{width:125px}.site-logo{width:118px;height:54px;object-fit:contain;display:block}.brand-mark{font-family:Georgia,serif;font-style:italic;font-size:34px;font-weight:700;color:var(--accent);line-height:.8;position:relative}.brand-mark:before{content:'✦';font-size:25px;position:absolute;left:42px;top:-20px}.brand-mark span{display:block;font:700 7px Inter;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-top:8px}.address{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:520px}.dot{color:#aaa}.lang{border:0;background:transparent;font-size:15px;font-weight:700;cursor:pointer}.phone{margin-left:auto;color:#111;text-decoration:none;font-size:15px;font-weight:700}
+.brand{width:76px}.site-logo{content:normal;width:64px;height:66px;object-fit:contain}
+.lang-switch{display:flex;gap:3px;padding:3px;background:#f1f1f1;border-radius:12px}.lang-option{border:0;background:transparent;padding:7px 10px;border-radius:9px;font-size:12px;font-weight:800;cursor:pointer;color:#777}.lang-option.active{background:#fff;color:#111;box-shadow:0 1px 5px rgba(0,0,0,.1)}
+.layout{max-width:1370px;margin:25px auto;display:grid;grid-template-columns:225px 1fr;gap:28px;padding:0 18px}.sidebar{display:flex;flex-direction:column;gap:6px}.cat{display:flex;align-items:center;gap:10px;padding:7px 9px;border-radius:17px;cursor:pointer;font-size:13px;font-weight:700;line-height:1.1;transition:.2s}.cat:hover,.cat.active{background:#fff}.cat img{width:43px;height:43px;object-fit:cover;border-radius:13px}.content{min-width:0}.toolbar{display:flex;gap:6px}.search-wrap{height:58px;background:#fff;border-radius:17px;display:flex;align-items:center;padding:0 18px;flex:1}.search-wrap span{font-size:28px;color:#999;transform:rotate(-20deg);margin-right:12px}.search-wrap input{border:0;outline:0;font:500 15px Inter;width:100%;background:transparent}.filter{width:58px;border:0;background:#fff;border-radius:17px;font-size:24px;color:#999;cursor:pointer}.heading-row{display:flex;align-items:center;margin:18px 0 18px}.heading-row h1{font-size:24px;margin:0}.heading-row span{margin-left:auto;color:#999;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:#fff;border-radius:25px;padding:12px;overflow:hidden;cursor:pointer;transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.08)}.card img{width:100%;aspect-ratio:1.52;object-fit:cover;border-radius:17px;display:block}.price{font-size:17px;font-weight:800;margin-top:10px}.name{font-size:14px;font-weight:800;margin-top:8px}.desc{font-size:12px;color:#8c8c8c;line-height:1.45;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.42);display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal-backdrop.open{display:flex}.modal{background:#fff;width:min(820px,100%);border-radius:25px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.25)}.close{position:absolute;right:18px;top:18px;border:0;width:42px;height:42px;border-radius:50%;background:#f2f2f2;font-size:28px;cursor:pointer;z-index:2}.modal-main{display:grid;grid-template-columns:1.05fr 1fr;gap:22px;padding:24px 24px 20px}.modal-main img{width:100%;aspect-ratio:1.5;object-fit:cover;border-radius:18px}.modal-info{padding:6px 42px 0 0}.modal-info h2{font-size:25px;margin:0 0 24px}.muted{color:#999;font-size:12px;font-weight:600;margin-bottom:10px}.modal-info p{font-size:13px;line-height:1.55;margin:0}.modal-price{border-top:1px solid var(--line);padding:12px 24px;font-size:25px;font-weight:800}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.layout{grid-template-columns:205px 1fr}.address{max-width:360px}}
+@media(max-width:800px){.topbar{height:auto;min-height:72px;padding:12px 16px;gap:12px;flex-wrap:wrap}.brand{width:100px}.address{order:3;width:100%;max-width:none}.phone{margin-left:auto}.layout{display:block;margin:12px auto;padding:0 12px}.sidebar{flex-direction:row;overflow:auto;margin-bottom:12px;padding-bottom:4px}.cat{min-width:max-content}.cat img{width:38px;height:38px}.content{width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.modal-main{grid-template-columns:1fr}.modal-info{padding:0}.modal-info h2{margin-bottom:12px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.heading-row h1{font-size:20px}.search-wrap{height:52px}.filter{width:52px}.modal{border-radius:20px}.modal-main{padding:16px}.modal-price{padding:10px 16px}}
+
+/* Modern Uzbek minimalism */
+:root{--bg:#f7f2e8;--card:#fffdf8;--text:#17283a;--muted:#7d766b;--accent:#a83b32;--accent-dark:#72251f;--gold:#c69a52;--line:#e6dcc9}
+body{font-family:"Segoe UI",Arial,sans-serif;background-color:var(--bg);background-image:radial-gradient(circle at 12px 12px,rgba(168,59,50,.045) 1px,transparent 1.2px);background-size:24px 24px}
+.topbar{height:94px;padding:0 max(28px,calc((100vw - 1380px)/2));gap:24px;border-radius:0;background:rgba(255,253,248,.96);border-bottom:1px solid var(--line);box-shadow:0 8px 30px rgba(44,35,24,.055);backdrop-filter:blur(16px)}
+.topbar:after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:4px;background:repeating-linear-gradient(90deg,var(--accent) 0 18px,var(--gold) 18px 22px,transparent 22px 30px);opacity:.75}
+.brand{width:72px;flex:0 0 72px}.site-logo{width:64px;height:68px;filter:sepia(.12) saturate(1.25)}
+.address{font-family:Georgia,"Times New Roman",serif;font-size:16px;font-weight:600;color:var(--text);letter-spacing:.1px}.dot{color:var(--gold);font-size:18px}
+.phone{color:var(--accent-dark);font-size:14px;letter-spacing:.4px;padding:11px 16px;border:1px solid rgba(168,59,50,.25);border-radius:999px;background:#fffaf2;transition:.2s}.phone:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.lang-switch{padding:4px;background:#efe5d5;border:1px solid #e2d5c1;border-radius:999px}.lang-option{padding:7px 11px;border-radius:999px;color:#70675c}.lang-option.active{background:var(--accent);color:#fff;box-shadow:none}
+.layout{max-width:1400px;margin:38px auto 70px;grid-template-columns:245px 1fr;gap:42px;padding:0 28px}
+.sidebar{position:sticky;top:126px;align-self:start;gap:4px;padding:14px;background:rgba(255,253,248,.72);border:1px solid var(--line);border-radius:24px;box-shadow:0 16px 40px rgba(57,43,25,.05)}
+.cat{position:relative;gap:13px;padding:9px;border-radius:16px;font-size:13px;font-weight:650;color:#3d4650;border:1px solid transparent}.cat:after{content:"";position:absolute;right:13px;width:6px;height:6px;border-top:1px solid var(--gold);border-right:1px solid var(--gold);transform:rotate(45deg);opacity:.55}
+.cat:hover{background:#fff9ef;border-color:#eadcc4}.cat.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 8px 20px rgba(114,37,31,.16)}.cat.active:after{border-color:#fff}.cat img{width:44px;height:44px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(198,154,82,.4)}
+.toolbar{gap:12px}.search-wrap{height:56px;background:rgba(255,253,248,.88);border:1px solid var(--line);border-radius:16px;padding:0 20px;box-shadow:0 10px 30px rgba(57,43,25,.04)}.search-wrap span{color:var(--accent);font-size:24px}.search-wrap input{font-family:"Segoe UI",Arial,sans-serif;color:var(--text)}
+.filter{height:56px;width:56px;background:var(--text);color:#fff;border-radius:16px;box-shadow:0 10px 26px rgba(23,40,58,.15)}
+.heading-row{margin:28px 0 19px;padding-bottom:13px;border-bottom:1px solid var(--line)}.heading-row h1{font-family:Georgia,"Times New Roman",serif;font-size:31px;font-weight:500;color:var(--text);letter-spacing:-.3px}.heading-row h1:before{content:"✦";display:inline-block;margin-right:11px;color:var(--gold);font-size:17px;vertical-align:4px}.heading-row span{color:var(--accent);font-weight:700;letter-spacing:.4px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.card{position:relative;padding:0 0 17px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 24px rgba(54,42,27,.045);transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}.card:hover{transform:translateY(-5px);border-color:#d6c09c;box-shadow:0 18px 42px rgba(54,42,27,.11)}
+.card img{aspect-ratio:1.45;border-radius:17px 17px 0 0}.card .price,.card .name,.card .desc{margin-left:16px;margin-right:16px}.price{display:inline-block;margin-top:15px;padding:5px 10px;background:#f2e5d3;color:var(--accent-dark);border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.2px}.name{font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.25;margin-top:11px;color:var(--text)}.desc{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:7px}
+.modal-backdrop{background:rgba(15,25,35,.64);backdrop-filter:blur(7px)}.modal{background:var(--card);border:1px solid #eadcc6;border-radius:22px}.close{background:#f2e5d3;color:var(--accent-dark)}.modal-info h2{font-family:Georgia,"Times New Roman",serif;color:var(--text)}.modal-price{color:var(--accent-dark);border-color:var(--line)}
+@media(max-width:1100px){.layout{grid-template-columns:220px 1fr;gap:25px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.topbar{padding:12px 16px;border-radius:0}.dot{display:none}.layout{margin:22px auto 50px;padding:0 14px}.sidebar{position:static;padding:8px;gap:7px;border-radius:18px;background:rgba(255,253,248,.88)}.cat{padding:6px 12px 6px 6px}.cat:after{display:none}.grid{gap:14px}.heading-row h1{font-size:27px}}
+@media(max-width:520px){.topbar{gap:9px}.brand{width:58px;flex-basis:58px}.site-logo{width:54px;height:58px}.phone{padding:8px 11px;font-size:12px}.address{font-size:14px}.grid{grid-template-columns:1fr}.card img{aspect-ratio:1.6}.heading-row h1{font-size:24px}.lang-option{padding:6px 8px}}
+/* Clean modern minimalism */
+:root{--bg:#f5f5f2;--card:#ffffff;--text:#181817;--muted:#7b7b76;--accent:#8f2927;--accent-dark:#681b1a;--gold:#b79a69;--line:#e7e6e1}
+body{background:var(--bg);background-image:none;font-family:Inter,"Segoe UI",Arial,sans-serif}
+.topbar{height:82px;padding:0 max(24px,calc((100vw - 1380px)/2));gap:22px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);box-shadow:none;backdrop-filter:blur(18px)}
+.topbar:after{display:none}.brand{width:64px;flex-basis:64px}.site-logo{width:58px;height:60px;filter:none}
+.address{font-family:inherit;font-size:14px;font-weight:600;letter-spacing:0}.dot{color:#c6c5bf}.phone{padding:9px 14px;background:transparent;border-color:var(--line);color:var(--text);font-size:13px}.phone:hover{background:var(--text);border-color:var(--text)}
+.lang-switch{padding:3px;background:#efefec;border:0}.lang-option{padding:7px 10px;color:#777}.lang-option.active{background:#fff;color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.layout{max-width:1400px;margin:30px auto 64px;grid-template-columns:220px 1fr;gap:36px;padding:0 24px}
+.sidebar{top:108px;padding:8px;background:transparent;border:0;border-radius:0;box-shadow:none;gap:3px}
+.cat{gap:12px;padding:8px;border-radius:13px;font-size:13px;color:#555;border:0}.cat:after{display:none}.cat:hover{background:#ecece8}.cat.active{background:var(--text);color:#fff;border:0;box-shadow:none}.cat img{width:40px;height:40px;border-radius:11px;border:0;box-shadow:none}
+.toolbar{gap:10px}.search-wrap{height:54px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 18px;box-shadow:none}.search-wrap span{color:#aaa;font-size:22px}.filter{height:54px;width:54px;background:#fff;color:#777;border:1px solid var(--line);border-radius:14px;box-shadow:none}
+.heading-row{margin:25px 0 17px;padding:0;border:0}.heading-row h1{font-family:inherit;font-size:27px;font-weight:700;letter-spacing:-.7px}.heading-row h1:before{display:none}.heading-row span{color:var(--muted);font-weight:500;letter-spacing:0}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{padding:0 0 16px;border:1px solid var(--line);border-radius:16px;box-shadow:none}.card:hover{transform:translateY(-3px);border-color:#d2d1cb;box-shadow:0 14px 34px rgba(25,25,22,.08)}
+.card img{aspect-ratio:1.5;border-radius:15px 15px 0 0}.card .price,.card .name,.card .desc{margin-left:14px;margin-right:14px}
+.price{margin-top:13px;padding:0;background:transparent;color:var(--accent);border-radius:0;font-size:15px}.name{font-family:inherit;font-size:15px;line-height:1.3;margin-top:8px}.desc{font-size:12px;line-height:1.5;margin-top:6px}
+.modal{border:0;border-radius:18px}.modal-main img{border-radius:13px}.modal-info h2{font-family:inherit}.close{background:#f1f1ed;color:var(--text)}
+@media(min-width:1250px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.topbar{height:auto;padding:10px 14px}.layout{margin-top:18px;padding:0 12px}.sidebar{padding:0 0 8px}.cat{background:#fff;border:1px solid var(--line)}.cat.active{background:var(--text);border-color:var(--text)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.heading-row h1{font-size:24px}}
+@media(max-width:520px){.brand{width:52px;flex-basis:52px}.site-logo{width:48px;height:52px}.grid{grid-template-columns:1fr}.card img{aspect-ratio:1.55}.address{font-size:13px}.phone{padding:7px 10px}}
+/* Editorial minimal layout — complete visual redesign */
+:root{--bg:#f3f1ec;--card:#fff;--text:#151719;--muted:#777871;--accent:#9b302d;--accent-dark:#70211f;--line:#deddd7}
+body{background:#f3f1ec;color:var(--text)}
+.topbar{position:relative;height:76px;padding:0 max(28px,calc((100vw - 1320px)/2));background:#151719;color:#fff;border:0;box-shadow:none;gap:24px}
+.topbar .site-logo{filter:brightness(0) invert(1);opacity:.94}.topbar .address{color:#e8e7e2;font-size:13px;font-weight:500}.topbar .dot{color:#777}.topbar .phone{margin-left:auto;color:#fff;border-color:#444;background:transparent}.topbar .phone:hover{background:#fff;color:#151719}.topbar .lang-switch{background:#292b2d;border:0}.topbar .lang-option{color:#aaa}.topbar .lang-option.active{background:#fff;color:#151719}
+.layout{display:flex;flex-direction:column;max-width:1320px;margin:0 auto 72px;padding:0 28px;gap:0}
+.sidebar{order:0;position:relative;top:auto;display:flex;flex-direction:row;align-items:center;gap:8px;width:100%;padding:20px 0;overflow-x:auto;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;scrollbar-width:none}.sidebar::-webkit-scrollbar{display:none}
+.cat{flex:0 0 auto;gap:8px;padding:6px 13px 6px 6px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.45);font-size:12px;font-weight:650;color:#555;white-space:nowrap}.cat:hover{background:#fff;border-color:#c9c7bf}.cat.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:none}.cat img{width:30px;height:30px;border-radius:50%;filter:saturate(.85)}
+.content{order:1;padding-top:31px}.toolbar{max-width:560px;margin-left:auto}.search-wrap{height:46px;border:0;border-bottom:1px solid #bbb9b0;border-radius:0;background:transparent;padding:0 2px;box-shadow:none}.search-wrap:focus-within{border-color:var(--accent)}.search-wrap span{margin-right:8px;color:#777;font-size:20px}.search-wrap input{font-size:13px}.filter{display:none}
+.heading-row{margin:-44px 0 35px;padding:0;max-width:calc(100% - 600px);border:0;align-items:flex-end}.heading-row h1{font-size:42px;font-weight:500;line-height:1;letter-spacing:-1.8px}.heading-row h1:before{display:block;content:"RESTAURANT MENU";margin:0 0 12px;color:var(--accent);font:700 10px/1 Inter,"Segoe UI",sans-serif;letter-spacing:2.2px}.heading-row span{margin-left:16px;padding-bottom:3px;font-size:11px;color:#888}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{min-height:190px;display:grid;grid-template-columns:44% 1fr;grid-template-rows:auto auto 1fr;column-gap:20px;padding:0;background:#fff;border:0;border-radius:2px;overflow:hidden;box-shadow:none}.card:hover{transform:none;border:0;box-shadow:0 16px 36px rgba(20,20,18,.09)}
+.card img{grid-column:1;grid-row:1/4;width:100%;height:100%;min-height:190px;aspect-ratio:auto;object-fit:cover;border-radius:0;transition:transform .45s ease}.card:hover img{transform:scale(1.025)}
+.card .price,.card .name,.card .desc{grid-column:2;margin-left:0;margin-right:18px}.card .price{grid-row:1;justify-self:start;margin-top:22px;padding:0;background:transparent;color:var(--accent);font-size:12px;letter-spacing:.5px}.card .name{grid-row:2;margin-top:9px;font-size:18px;font-weight:650;line-height:1.25;letter-spacing:-.2px}.card .desc{grid-row:3;margin-top:8px;padding-bottom:20px;font-size:12px;line-height:1.55;color:#85857f;-webkit-line-clamp:3}
+.modal-backdrop{background:rgba(10,11,12,.72)}.modal{border-radius:2px}.modal-main img{border-radius:0}.close{border-radius:0;background:#151719;color:#fff}
+@media(max-width:950px){.heading-row{margin:25px 0;max-width:none}.toolbar{max-width:none;margin:0}.content{padding-top:24px}.grid{grid-template-columns:1fr}.card{min-height:180px}}
+@media(max-width:800px){.topbar{padding:10px 14px}.layout{padding:0 14px;margin-bottom:40px}.sidebar{margin:0;padding:14px 0}.cat{background:#fff}.content{padding-top:20px}.heading-row{margin:22px 0}.heading-row h1{font-size:34px}.grid{grid-template-columns:1fr;gap:12px}}
+@media(max-width:560px){.topbar{background:#151719}.topbar .address{order:3;width:100%;color:#bbb}.grid{gap:10px}.card{grid-template-columns:128px 1fr;column-gap:14px;min-height:150px}.card img{min-height:150px}.card .price{margin-top:16px;font-size:11px}.card .name{font-size:15px;margin-top:7px}.card .desc{font-size:11px;margin-top:5px;padding-bottom:14px;-webkit-line-clamp:2}.heading-row h1{font-size:30px}.heading-row h1:before{margin-bottom:9px}.phone{font-size:11px}}
+/* Revert to previous clean modern layout */
+body{background:var(--bg);background-image:none;font-family:Inter,"Segoe UI",Arial,sans-serif}
+.topbar{position:sticky;height:82px;padding:0 max(24px,calc((100vw - 1380px)/2));gap:22px;background:rgba(255,255,255,.94);color:var(--text);border-bottom:1px solid var(--line);box-shadow:none;backdrop-filter:blur(18px)}
+.topbar .site-logo{filter:none;opacity:1}.topbar .address{color:var(--text);font-size:14px;font-weight:600}.topbar .dot{display:block;color:#c6c5bf}.topbar .phone{margin-left:auto;color:var(--text);border-color:var(--line);background:transparent;font-size:13px}.topbar .phone:hover{background:var(--text);color:#fff}.topbar .lang-switch{background:#efefec}.topbar .lang-option{color:#777}.topbar .lang-option.active{background:#fff;color:var(--text)}
+.layout{display:grid;max-width:1400px;margin:30px auto 64px;grid-template-columns:220px 1fr;gap:36px;padding:0 24px}
+.sidebar{order:initial;position:sticky;top:108px;display:flex;flex-direction:column;align-items:stretch;gap:3px;width:auto;padding:8px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none}
+.cat{flex:initial;gap:12px;padding:8px;border:0;border-radius:13px;background:transparent;font-size:13px;color:#555;white-space:normal}.cat:hover{background:#ecece8;border:0}.cat.active{background:var(--text);border:0;color:#fff}.cat img{width:40px;height:40px;border-radius:11px}
+.content{order:initial;padding-top:0}.toolbar{max-width:none;margin-left:0;gap:10px}.search-wrap{height:54px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:0 18px}.filter{display:block;height:54px;width:54px;background:#fff;color:#777;border:1px solid var(--line);border-radius:14px}
+.heading-row{margin:25px 0 17px;padding:0;max-width:none;border:0;align-items:center}.heading-row h1{font-size:27px;font-weight:700;line-height:normal;letter-spacing:-.7px}.heading-row h1:before{display:none}.heading-row span{margin-left:auto;padding-bottom:0;font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{min-height:0;display:block;padding:0 0 16px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:none}.card:hover{transform:translateY(-3px);border:1px solid #d2d1cb;box-shadow:0 14px 34px rgba(25,25,22,.08)}
+.card img{display:block;width:100%;height:auto;min-height:0;aspect-ratio:1.5;object-fit:cover;border-radius:15px 15px 0 0;transform:none}.card:hover img{transform:none}.card .price,.card .name,.card .desc{display:block;margin-left:14px;margin-right:14px}.card .price{margin-top:13px;padding:0;color:var(--accent);font-size:15px}.card .name{margin-top:8px;font-size:15px;font-weight:800;line-height:1.3}.card .desc{margin-top:6px;padding-bottom:0;font-size:12px;line-height:1.5;-webkit-line-clamp:2}
+.modal{border-radius:18px}.modal-main img{border-radius:13px}.close{border-radius:50%;background:#f1f1ed;color:var(--text)}
+@media(min-width:1250px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1100px){.layout{grid-template-columns:205px 1fr;gap:25px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.topbar{height:auto;padding:10px 14px}.topbar .dot{display:none}.layout{display:block;margin:18px auto 40px;padding:0 12px}.sidebar{position:static;flex-direction:row;align-items:center;overflow-x:auto;padding:0 0 10px;gap:7px}.cat{flex:0 0 auto;padding:6px 12px 6px 6px;background:#fff;border:1px solid var(--line);white-space:nowrap}.cat.active{background:var(--text);border-color:var(--text)}.content{padding-top:0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.heading-row{margin:22px 0}.heading-row h1{font-size:24px}}
+@media(max-width:520px){.topbar .address{order:3;width:100%;color:var(--text)}.grid{grid-template-columns:1fr}.card{min-height:0;display:block}.card img{height:auto;min-height:0;aspect-ratio:1.55}.card .price{margin-top:13px;font-size:15px}.card .name{font-size:15px}.card .desc{font-size:12px;padding-bottom:0}.heading-row h1{font-size:24px}}
+</style>
+<link rel="stylesheet" href="kukaldosh.css" />
+<script src="menu-data.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img class="site-logo" src="assets/kukaldosh-logo.png" alt="Kukaldosh Garden"></div>
+  <div class="address" id="address">Buxoro shahri, Eshoni Pir ko‘chasi, 11-uy</div>
+  <div class="dot">•</div>
+  <div class="lang-switch" id="langSwitch" aria-label="Tilni tanlash"><button class="lang-option active" data-lang="uz">UZ</button><button class="lang-option" data-lang="en">EN</button><button class="lang-option" data-lang="ru">RU</button></div>
+  <a class="phone" href="tel:+998907124411">+998 90 712 44 11</a>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="content">
+    <div class="toolbar">
+      <div class="search-wrap"><span>⌕</span><input id="search" placeholder="Search" /></div>
+      <button class="filter" id="filterBtn" aria-label="Filter">☷</button>
+    </div>
+    <div class="heading-row"><h1 id="sectionTitle">Салаты / Salads</h1><span id="count"></span></div>
+    <section class="grid" id="grid"></section>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="backdrop">
+ <div class="modal" role="dialog" aria-modal="true">
+   <button class="close" id="close">×</button>
+   <div class="modal-main">
+     <img id="modalImg" src="" alt="">
+     <div class="modal-info">
+       <h2 id="modalName"></h2>
+       <div class="muted">Description</div>
+       <p id="modalDesc"></p>
+     </div>
+   </div>
+   <div class="modal-price" id="modalPrice"></div>
+ </div>
+</div>
+<script>
+products.forEach((p,i)=>{p.nameRu=p.name;p.descRu=p.desc;p.nameUz=productNames.uz[i];p.nameEn=productNames.en[i]});
+const sidebar=document.querySelector('#sidebar'),grid=document.querySelector('#grid'),search=document.querySelector('#search'),count=document.querySelector('#count');
+let active='salads',currentLang='uz';
+function localizedName(p){return currentLang==='uz'?p.nameUz:currentLang==='en'?p.nameEn:p.nameRu}
+function localizedDesc(p){return currentLang==='ru'?p.descRu:ui[currentLang].desc[p.cat]}
+function buildSidebar(){sidebar.innerHTML='';categories.forEach(c=>{const el=document.createElement('div');const representative=products.find(p=>p.cat===c[2]);el.className='cat'+(c[2]===active?' active':'');el.innerHTML=`<img src="${representative?productImage(representative):IMAGE_DATA[c[1]]}" alt="${categoryNames[c[2]][currentLang]}"><span>${categoryNames[c[2]][currentLang]}</span>`;el.onclick=()=>{active=c[2];buildSidebar();render()};sidebar.appendChild(el)})}
+function productImage(p){return IMAGE_DATA[p.img]||p.img}
+function render(){const q=search.value.trim().toLowerCase();const list=products.filter(p=>p.cat===active&&(!q||(`${localizedName(p)} ${localizedDesc(p)} ${p.nameRu}`).toLowerCase().includes(q)));document.querySelector('#sectionTitle').textContent=categoryNames[active][currentLang];grid.innerHTML=list.map(p=>`<article class="card" data-i="${products.indexOf(p)}"><img src="${productImage(p)}" alt="${localizedName(p)}" loading="lazy"><div class="price">${p.price}</div><div class="name">${localizedName(p)}</div><div class="desc">${localizedDesc(p)}</div></article>`).join('');count.textContent=ui[currentLang].count(list.length);document.querySelectorAll('.card').forEach(card=>card.onclick=()=>openModal(products[card.dataset.i]))}
+search.addEventListener('input',render);
+const backdrop=document.querySelector('#backdrop');
+function openModal(p){document.querySelector('#modalImg').src=productImage(p);document.querySelector('#modalName').textContent=localizedName(p);document.querySelector('#modalDesc').textContent=localizedDesc(p);document.querySelector('#modalPrice').textContent=p.price;backdrop.classList.add('open')}
+function closeModal(){backdrop.classList.remove('open')}document.querySelector('#close').onclick=closeModal;backdrop.onclick=e=>{if(e.target===backdrop)closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('.lang-option').forEach(btn=>btn.onclick=()=>{currentLang=btn.dataset.lang;document.querySelectorAll('.lang-option').forEach(x=>x.classList.toggle('active',x===btn));document.documentElement.lang=currentLang;document.querySelector('#address').textContent=ui[currentLang].address;search.placeholder=ui[currentLang].search;buildSidebar();render()});
+document.querySelector('#filterBtn').onclick=()=>search.focus();
+search.placeholder=ui[currentLang].search;buildSidebar();render();
+
+</script>
+</body>
+</html>
